@@ -7,17 +7,21 @@
 
 #include "Component.h"
 #include <iostream>
-#include <list>
+#include <vector>
+using namespace std;
 class Composite : public Component{
-public:
-  void showDetails() override;
-  void addComponent(Component *component);
-  double getPrice() override;
-  Composite(const std::string &name);
 
 private:
   std::string name;
-  std::list<Component*> components;
+  std::vector<Component*> components;
+
+public:
+  Composite(const std::string &name);
+  void showDetails() override;
+  double getPrice() override;
+
+  void addComponent(Component *component);
+
 };
 
 

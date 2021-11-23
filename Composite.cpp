@@ -3,15 +3,12 @@
 //
 
 #include "Composite.h"
-#include "Color.h"
-
 
 
 Composite::Composite(const std::string &name) : name(name) {}
 
 void Composite::showDetails() {
 
-  Color::setConsoleColor(1);
   std::cout << name<< std::endl;
   for(Component *c: components){
     c->showDetails();
@@ -19,7 +16,7 @@ void Composite::showDetails() {
 }
 
 void Composite::addComponent(Component *component) {
-  components.push_back(component);
+  components.emplace_back(component);
 }
 
 double Composite::getPrice() {
