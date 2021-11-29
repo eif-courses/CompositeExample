@@ -13,3 +13,7 @@ void Leaf::showDetails() {
 double Leaf::getPrice() {
   return price;
 }
+
+const std::string &Leaf::GetName() const {
+  return name;
+}

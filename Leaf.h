@@ -17,6 +17,8 @@ public:
   void showDetails() override;
   double getPrice() override;
 
+  const std::string &GetName() const;
 };
+
 
 #endif //COMPOSITEEXAMPLE_LEAF_H
